@@ -57,5 +57,4 @@ stem(signalas > u1)
 [min_val, idx_min] = min(signalas > u1);
 [max_val, idx_max] = max(signalas > u1);
 hold on;
-stem(x(idx_min), min_val, 'r', 'MarkerFaceColor', 'r', 'LineWidth', 1.5);
-stem(x(idx_max), max_val, 'g', 'MarkerFaceColor', 'g', 'LineWidth', 1.5);
+stem(idxmin, 'r', 'MarkerFaceColor', 'r', 'LineWidth', 1.5);
