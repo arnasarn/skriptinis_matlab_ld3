@@ -51,11 +51,8 @@ plot(new_s, 'Color',[0.56, 0, 1.0])
 yline(u1,'LineStyle','-.', 'LineWidth',1.25)
 yline(u2)
 subplot(2,1,2)
-idxmin = find(signalas == max(signalas));
-idxmax = find(signalas == min(signalas));
+
 stem(signalas > u1)
-[min_val, idx_min] = min(signalas > u1);
-[max_val, idx_max] = max(signalas > u1);
 hold on;
-stem(x(idx_min), min_val, 'r', 'MarkerFaceColor', 'r', 'LineWidth', 1.5);
-stem(x(idx_max), max_val, 'g', 'MarkerFaceColor', 'g', 'LineWidth', 1.5);
+
+plot(,max(signalas > u1))
