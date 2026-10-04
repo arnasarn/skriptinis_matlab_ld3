@@ -2,6 +2,10 @@ figure;
 t = linspace(-pi, pi, 50);
 plot(t,sin(t), 'LineStyle','-', 'Color','r')
 axis([min(t) max(t) min(sin(t)) max(sin(t))])
+xlabel('X reiksmes')
+ylabel('Y reiksmes')
+legend('sin(t)')
+grid on
 
 figure;
 x = linspace(-pi, pi, 50);
@@ -50,9 +54,13 @@ hold on;
 plot(new_s, 'Color',[0.56, 0, 1.0])
 yline(u1,'LineStyle','-.', 'LineWidth',1.25)
 yline(u2)
+legend('signalas', 'new\_s', 'u1', 'u2')
+
 subplot(2,1,2)
 
 stem(signalas > u1)
 hold on;
-
-plot(,max(signalas > u1))
+plot(find(signalas > u1), max(signalas > u1), 'r', 'Marker','d', 'LineStyle','none', 'MarkerSize', 9);
+hold on;
+plot(find(signalas > u1), min(signalas > u1), 'r', 'Marker','d', 'LineStyle','none', 'MarkerSize', 9);
+legend('signalas > u1', 'Maksimali reikšmė', 'Minimali reikšmė')
